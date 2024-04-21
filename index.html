@@ -91,7 +91,9 @@
 			var operator = document.getElementById("operator").value;
 			var result = 0;
 
-			if (operator === "/" && num2 === "0") {
+			if (num1 === "" || num2 === "") {
+				document.getElementById("result").innerHTML = "Please enter both numbers";
+			} else if (operator === "/" && num2 === "0") {
 				document.getElementById("result").innerHTML = "Cannot divide by zero";
 			} else {
 				switch (operator) {
