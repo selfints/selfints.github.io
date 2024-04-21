@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>my first website</title>
+        <script>
+            window.onload = function() {
+                document.getElementById("myButton").onclick = function() {
+                    alert(document.getElementById("myInput").value);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <h1>hello坐在桌上</h1>
+        <hr />
+        <p>qym110809</p>
+        <span style="color:red;">hahaha</span>
+        <input type="text" placeholder="请输入内容" id="myInput" />
+        <input type="button" value="提交" id="myButton" />
+    </body>
+</html>
