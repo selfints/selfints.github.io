@@ -90,21 +90,26 @@
 			var num2 = document.getElementById("num2").value;
 			var operator = document.getElementById("operator").value;
 			var result = 0;
-			switch(operator) {
-				case "+":
-					result = parseFloat(num1) + parseFloat(num2);
-					break;
-				case "-":
-					result = parseFloat(num1) - parseFloat(num2);
-					break;
-				case "*":
-					result = parseFloat(num1) * parseFloat(num2);
-					break;
-				case "/":
-					result = parseFloat(num1) / parseFloat(num2);
-					break;
+
+			if (operator === "/" && num2 === "0") {
+				document.getElementById("result").innerHTML = "Cannot divide by zero";
+			} else {
+				switch (operator) {
+					case "+":
+						result = parseFloat(num1) + parseFloat(num2);
+						break;
+					case "-":
+						result = parseFloat(num1) - parseFloat(num2);
+						break;
+					case "*":
+						result = parseFloat(num1) * parseFloat(num2);
+						break;
+					case "/":
+						result = parseFloat(num1) / parseFloat(num2);
+						break;
+				}
+				document.getElementById("result").innerHTML = "Result: " + result;
 			}
-			document.getElementById("result").innerHTML = "Result: " + result;
 		}
 	</script>
 </body>
