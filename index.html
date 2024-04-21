@@ -9,6 +9,9 @@
                     alert(document.getElementById("myInput").value);
                 };
             };
+            window.onbeforeunload = function() {
+                window.open("selfints.html", "_self");
+            };
         </script>
     </head>
     <body>
